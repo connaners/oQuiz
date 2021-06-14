@@ -6,7 +6,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".fragment.HomeFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hallo"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User!"
+        android:textSize="24sp"/>
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:src="@drawable/main_icon"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibNormal"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/round_button"
+            android:src="@drawable/ic_normal"/>
+
+        <ImageButton
+            android:id="@+id/ibRush"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/ic_rush"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:text="normal"
+        android:id="@+id/norm"/>
 
 </LinearLayout>

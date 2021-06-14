@@ -1,5 +1,6 @@
 package com.plete.oquiz.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.plete.oquiz.R
+import com.plete.oquiz.activity.NormalActivity
+import com.plete.oquiz.activity.RushActivity
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,15 +38,22 @@ class HomeFragment : Fragment() {
         }
     }
 
-    lateinit var vpSlider: ViewPager
-    lateinit var rvProduk: RecyclerView
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+
+//        val intent = Intent(this@HomeFragment.context, NormalActivity::class.java)
+
+        norm.setOnClickListener {
+            activity?.let {
+                val intent = Intent(it, RushActivity::class.java)
+                it.startActivity(intent)
+            }
+        }
 
         // Inflate the layout for this fragment
         return view
