@@ -45,18 +45,23 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-
-//        val intent = Intent(this@HomeFragment.context, NormalActivity::class.java)
-
-        norm.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it, RushActivity::class.java)
-                it.startActivity(intent)
-            }
-        }
-
         // Inflate the layout for this fragment
         return view
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        mainButton()
+    }
+
+    fun mainButton(){
+        ibNormal.setOnClickListener {
+            startActivity(Intent(this.context, NormalActivity::class.java))
+        }
+
+        ibRush.setOnClickListener {
+            startActivity(Intent(this.context, NormalActivity::class.java))
+        }
     }
 
     companion object {
